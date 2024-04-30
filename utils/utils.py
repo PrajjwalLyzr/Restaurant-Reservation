@@ -1,8 +1,4 @@
-import os
-import shutil
-from typing import Optional, Literal
 import streamlit as st
-from dotenv import load_dotenv; load_dotenv()
 
 
 def write_to_file(user_input, chatbot_response, file_path):
@@ -14,6 +10,18 @@ def write_to_file(user_input, chatbot_response, file_path):
 def read_chat_history(file_path):
     with open(file_path, 'r') as file:
         return file.readlines()
+
+
+def system_prompt():
+    sys_prompt = """
+        Your name is Eva.
+        You are the Manager at Gourmet Delight restaurant.
+        You represent the Gourmet Delight restaurant.
+        Output Length: Keep your answers less than 30 words so that it sounds more natural chat.
+        Your Persona: Iris is a middle-aged woman born in the US. She is friendly, with a great sense of humor that is understated and professional, but she understands that making people comfortable includes using humor.
+    """
+
+    return str(sys_prompt)
 
 def style_app():
     # You can put your CSS styles here
