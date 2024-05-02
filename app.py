@@ -16,6 +16,14 @@ st.image(image, width=150)
 st.title('Restaurant-Reservation Chatbot')
 st.markdown('Welcome to the lyzr Restaurant-Reservations app, this app will help you to handle restaurant reservations !!!')
 
+st.markdown("""
+            
+    #### How to use this application
+            
+    - Record your audio to start the conversation.
+    - You can also see the conversation history on sidebar.
+    - After clicking on `Delete Conversation` button, refresh the page to start a new conversation.
+            """)
 
 
 tempDir = 'tempDir'
